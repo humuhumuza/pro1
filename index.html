@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <title></title>
+</head>
+
+<body>
+  <h1>Add user</h1>
+  <form id="add-user">
+    <label for="fname">First name:</label>
+    <br />
+    <input type="text" id="fname" name="fname" />
+    <br />
+    <label for="lname">Last name:</label>
+    <br />
+    <input type="text" id="lname" name="lname" />
+    <br />
+    <br />
+    <button id="btnsubmit" class="btnsubmit">Send</button>
+  </form>
+  <h2>Users</h2>
+  <ul id="user-list"></ul>
+
+  <script>
+
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyA9LmWBQwJVo0yumqCNBeETvXshYv_RihQ",
+      authDomain: "humu-8d7c9.firebaseapp.com",
+      projectId: "humu-8d7c9",
+      storageBucket: "humu-8d7c9.appspot.com",
+      messagingSenderId: "489567312416",
+      appId: "1:489567312416:web:13f9e24f864b7f530bba45",
+      measurementId: "G-SZJKGL21XR"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    db.settings({ timestampsInSnapshots: true });
+
+
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
